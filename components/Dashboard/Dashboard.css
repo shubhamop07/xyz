@@ -1,0 +1,185 @@
+/* General container styles */
+.container-fluid {
+  background-color: #f8f9fa; /* Theme background color */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.heading h2 {
+  font-weight: 600;
+  color: #343a40; /* Theme text color */
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Styles for the zone cards */
+.zone-card {
+  flex: 1;
+  margin: 0 10px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.5s ease;
+  background-color: #ffffff; /* Card background */
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid transparent;
+}
+
+.zone-card h5 {
+  color: #343a40; /* Theme text color */
+  margin: 0;
+}
+
+/* Hover effects */
+.zone-card:hover {
+  transform: rotateY(5deg) scale(1.05); /* Card rotation on hover */
+  background-color: #e9ecef; /* Card hover background */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+}
+.main-dashboard {
+  background-image: url('D:\main project\EC.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 100px;
+  height: 100vh; /* Makes it full height */
+  width: 100%;  /* Makes it full width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Active state styling */
+.zone-card.active {
+  border: 2px solid #007bff; /* Primary theme color */
+  background-color: #f0f8ff; /* Light theme accent */
+}
+
+.nav-link.active h5 {
+  color: #007bff; /* Theme primary color */
+}
+
+/* Button toolbar styling */
+.btn-toolbar .btn {
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+  padding: 5px 15px;
+  font-weight: bold;
+}
+
+.btn-toolbar .btn-outline-secondary {
+  color: #007bff; /* Theme primary color */
+  border-color: #007bff; /* Outline matches the theme color */
+}
+
+.btn-toolbar .btn-outline-secondary:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-toolbar .btn:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+/* Flip card effect (back face hidden) */
+.zone-card:hover .zone-card-content {
+  transform: rotateY(7deg);
+}
+
+.zone-card-content {
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.zone-card-content div {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .zone-card {
+    margin: 10px 0;
+  }
+
+  .d-flex {
+    flex-direction: column;
+  }
+
+  .heading h2 {
+    text-align: center;
+  }
+}
+.main-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.section-card {
+  width: 30%;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  text-align: center;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-card:hover {
+  transform: translateY(-5px);
+}
+
+.section-card h2 {
+  font-size: 1.5rem;
+  margin: 15px 0 10px;
+}
+
+.section-card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.section-card .icon {
+  font-size: 3rem; /* Adjust icon size */
+  margin-bottom: 10px; /* Add space below icon */
+}
+
+.zone-card {
+  display: block;
+  margin-top: 15px;
+  text-decoration: none;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+  color: #333;
+  transition: background-color 0.3s ease;
+  width: 80%;
+}
+
+.zone-card:hover {
+  background-color: #e9ecef;
+}
+
+.zone-card.active {
+  background-color: #007bff;
+  color: white;
+}

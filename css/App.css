@@ -1,0 +1,103 @@
+/* General Styles for the App */
+body {
+  background-color: #f4f7f9;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.container-fluid {
+  padding: 20px;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #2c3e50;
+  padding: 10px 20px;
+}
+
+.navbar a {
+  color: #ecf0f1;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.navbar a:hover {
+  color: #3498db;
+}
+
+/* New container styles for sections (Dashboard, Power Consumption, etc.) */
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.section-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  flex-basis: 30%;
+  min-width: 250px;
+  max-width: 350px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  position: relative;
+}
+
+.section-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.section-card h2 {
+  font-size: 1.5rem;
+  color: #34495e;
+  margin-bottom: 10px;
+}
+
+.section-card p {
+  font-size: 1rem;
+  color: #7f8c8d;
+}
+
+.section-card .icon {
+  font-size: 40px;
+  color: #3498db;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.section-card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #3498db;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.section-card a:hover {
+  background-color: #2980b9;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .section-card {
+    flex-basis: 100%;
+  }
+}
