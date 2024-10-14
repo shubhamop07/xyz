@@ -1,0 +1,42 @@
+.machine {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+.gauge-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.gauge {
+  flex: 1;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.gauge h5 {
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .gauge-container {
+      flex-direction: column;
+  }
+
+  .gauge {
+      margin: 10px 0;
+  }
+}
